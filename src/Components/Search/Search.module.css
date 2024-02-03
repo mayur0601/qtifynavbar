@@ -4,15 +4,20 @@
 }
 
 .inputstyle{
+    padding: 5px;
     height: 85%;
     width: 22rem;
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
+    border-style: none;
 }
 
+
 .button{
-    height: 100%;
+    padding: 15px;
+    height: 113%;
     padding:5px;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
+    border-style: none;
 }
