@@ -1,0 +1,17 @@
+.wrapper{
+    display: flex;
+    
+}
+
+.inputstyle{
+    height: 32px;
+    width: 22rem;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.button{
+    padding:5px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
