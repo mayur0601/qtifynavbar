@@ -1,0 +1,15 @@
+.albumTitle{
+    color: var(--color-white);
+}
+
+.showTitle{
+    color: var(--color-primary);
+    margin-right:4rem;
+}
+
+.albumHeader{
+    display: flex;
+    justify-content:space-between;
+    margin-left: 1rem;
+    margin-bottom: 10px;
+}
