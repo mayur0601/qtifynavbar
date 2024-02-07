@@ -21,11 +21,12 @@ const Cards = () => {
         }
         fetchData();
     },[])
+
     
     let songAlbum = songs.map(song =>{
         return (
             <Grid item key={song.id} xs={3}>
-            <Card  image={song?.image} followers={song?.follows}/>
+            <Card  image={song?.image} followers={song?.follows} title={song?.title}/>
             </Grid>
         )
     })
