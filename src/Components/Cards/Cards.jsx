@@ -1,7 +1,6 @@
 import { useEffect,useState } from "react"
 import axios from "axios";
 import Box from '@mui/material/Box';
-// import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Card from '../Card/Card';
 import style from "./Cards.module.css";

@@ -7,9 +7,9 @@ import style from './Search.module.css';
 const Search = () => {
   return (
     <form className={style.wrapper}>
-        <div >
+        
         <input className={style.inputstyle} type="text" placeholder="Search a song of your choice..."></input>
-        </div>
+        
         <div>
             <button className={style.button} type="submit">
             <img src={SearchLogo} alt="search"/>

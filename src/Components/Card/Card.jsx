@@ -11,6 +11,9 @@ const Card = ({image,followers}) => {
         <div >
         <Chip style={{backgroundColor:'black', color:'white'}} label={totalFollowers} variant="outlined" size="large" />
         </div>
+        <div>
+        <h3>New English Song</h3>
+        </div>
     </div>
   )
 }
