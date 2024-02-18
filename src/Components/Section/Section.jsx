@@ -10,7 +10,7 @@ const Section = ({data,title,type}) => {
 
     console.log("inside section",data);
 
-    const [carouselToggle,setCarouselToggle] = useState(true);
+    const [carouselToggle,setCarouselToggle] = useState(false);
     
     const handleToggle = () => {
         setCarouselToggle(!carouselToggle);
