@@ -17,9 +17,9 @@ const Section = ({data,title,type}) => {
     }
     
     // eslint-disable-next-line react/prop-types
-    let songArray = data.map((ele)=>{
-        return <Card key={ele.id} data={ele} type={type}/>;
-    })
+    // let songArray = data.map((ele)=>{
+    //     return <Card key={ele.id} data={ele} type={type}/>;
+    // })
 
   return (
     <div>
@@ -36,7 +36,9 @@ const Section = ({data,title,type}) => {
             ) : (
                 <div className={styles.cardsWrapper}>
                     {carouselToggle ? (<div className={styles.wrapper}>
-                        {songArray}
+                        {data.map((card) => (
+                <Card data={card} type={type} key={card.id} />
+                ))}
                     </div>) : (<Carousel data={data} renderComponent={(data)=> <Card data={data} type={type}/> } />)}
                 </div>
             )

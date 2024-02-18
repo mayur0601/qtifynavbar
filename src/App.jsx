@@ -9,6 +9,19 @@ function App() {
   // const [count, setCount] = useState(0)
 
   const [topAlbumsData,setTopAlbumsData] = useState([]);
+  const [newAlbumSongs, setNewAlbumSongs] = useState([])
+
+  const generateNewAlbumSongs = async () => {
+    try {
+      const newAlbumSongs = await axios.get("https://qtify-backend-labs.crio.do/albums/new");
+      setNewAlbumSongs(newAlbumSongs.data);
+      // setFilteredDataValues(newAlbumSongs);
+    }
+    catch (error) {
+      console.log(error)
+      return null
+    }
+  }
 
   useEffect(()=>{
       async function fetchData(){
@@ -21,6 +34,7 @@ function App() {
           }
       }
       fetchData();
+      generateNewAlbumSongs();
   },[])
 
   return (
@@ -28,6 +42,7 @@ function App() {
       <Navbar/>
       <HeroSection/>
       <Section data={topAlbumsData} title={"Top Albums"} type="album"/>
+      <Section type='album' title='New Albums' data={newAlbumSongs} />
     </div>
   )
 }
