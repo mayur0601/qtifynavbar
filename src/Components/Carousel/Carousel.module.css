@@ -1,0 +1,16 @@
+
+.wrapper {
+    position: relative;
+}
+.arrowleft{
+    position: absolute;
+    top: 7rem;
+    z-index: 1;
+}
+
+.arrowright{
+    position: absolute;
+    z-index: 2;
+    top: 7rem;
+    right: 0px;
+}

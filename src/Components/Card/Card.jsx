@@ -4,24 +4,16 @@ import styles from './Card.module.css';
 import Chip from '@mui/material/Chip';
 import PropTypes from 'prop-types';
 
-const Card = ({image,followers,title}) => {
+const Card = ({data,type}) => {
+  let {image,follows,title} = data;
+  console.log("inside card",data);
   return (
-    // <div className={styles.card}>
-    //     <SongImage image={image}/>
-    //     <div >
-    //     <Chip style={{backgroundColor:'black', color:'white'}} label={totalFollowers} variant="outlined" size="large" />
-    //     </div>
-    //     <div>
-    //     <h3>{title}</h3>
-    //     </div>
-    // </div>
-
     <Tooltip>
       <div className={styles.wrapper}>
         <div className={styles.card}>
-          <img src={image} alt=""/>
+          <img src={image} alt={type}/>
           <div className={styles.banner}>
-            <Chip label={`${followers} follows`} size='small' className={styles.chip}/>
+            <Chip label={`${follows} follows`} size='small' className={styles.chip}/>
           </div>
         </div>
         <div className={styles.titleWrapper}>
@@ -33,9 +25,8 @@ const Card = ({image,followers,title}) => {
 }
 
 Card.propTypes = {
-    image: PropTypes.string.isRequired,
-    followers:PropTypes.number.isRequired,
-    title:PropTypes.string.isRequired
+    data: PropTypes.object.isRequired,
+    type:PropTypes.string.isRequired
   }
 
 export default Card;
