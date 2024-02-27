@@ -32,7 +32,7 @@ const Carousel = ({data,renderComponent}) => {
         <CarouselLeftNavigation/>
         <CarouselRightNavigation className={styles.arrowright}/>
         {
-          data.map(ele=>{
+          data?.map(ele=>{
             return (
               <div key={ele.id}>
               <SwiperSlide>{renderComponent(ele)}</SwiperSlide>
