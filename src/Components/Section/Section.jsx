@@ -1,3 +1,4 @@
+import { useState } from "react"
 import styles from './Section.module.css';
 import PropTypes from 'prop-types';
 import Card from '../Card/Card';

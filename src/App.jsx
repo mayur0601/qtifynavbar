@@ -14,11 +14,26 @@ function App() {
   const [songData,setSongData] = useState([]);
   const [filteredDataValues, setFilteredDataValues] = useState([])
   const [value, setValue] = useState(0);
-  const [carouselToggle,setCarouselToggle] = useState(false);
+ 
+  // handle toggle for top album
+  const [topToggle,setTopToggle] = useState(false);
+  // handle toggle for new album
+  const [newAblumToggle,setNewAblumToggle] = useState(false);
+  // handle toggle for tabToggles
+  const [tabToggle,setTabToggle] = useState(false);
 
-  const handleToggle = () => {
-      setCarouselToggle(!carouselToggle);
+  const handleToggleTop = () => {
+    setTopToggle(!topToggle);
   }
+
+  const handleToggleNew = () => {
+    setNewAblumToggle(!newAblumToggle);
+  }
+
+  const handleTabToggle = () => {
+    setTabToggle(!tabToggle);
+  }
+
   const handleChange = (event, newValue) => {
     setValue(newValue)
     generateSongsData(newValue)
@@ -99,9 +114,9 @@ function App() {
     <div className="App">
       <Navbar/>
       <HeroSection/>
-      <Section title="Top Albums" type="album" data={topAlbumsData} filteredDataValues={topAlbumsData} toggle={carouselToggle} handleToggle={handleToggle}/>
-      <Section type='album' title='New Albums' data={newAlbumSongs} filteredDataValues={newAlbumSongs} toggle={carouselToggle} handleToggle={handleToggle}/>
-      <Section type='song' title='Songs' data={songData} filteredDataValues={filteredDataValues} toggle={carouselToggle} value={value} handleToggle={handleToggle} handleChange={handleChange}/>
+      <Section title="Top Albums" type="album" data={topAlbumsData} filteredDataValues={topAlbumsData}  toggle={topToggle} handleToggle={handleToggleTop}/>
+      <Section type='album' title='New Albums' data={newAlbumSongs} filteredDataValues={newAlbumSongs} toggle={newAblumToggle} handleToggle={handleToggleNew}/>
+      <Section type='song' title='Songs' data={songData} filteredDataValues={filteredDataValues} value={value} handleChange={handleChange} toggle={tabToggle} handleToggle={handleTabToggle}/>
     </div>
   )
 }
